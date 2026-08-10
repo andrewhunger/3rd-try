@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder for Cady's Ella Langley alter ego photo">
+  <rect width="800" height="600" fill="#7b4a2e"/>
+  <circle cx="585" cy="125" r="94" fill="#f7c94b"/>
+  <path d="M179 289h442l-52 77H231z" fill="#d8a56a" stroke="#18323a" stroke-width="8"/>
+  <path d="M310 285c0-123 34-177 90-177s90 54 90 177" fill="#d8a56a" stroke="#18323a" stroke-width="8"/>
+  <rect x="369" y="178" width="62" height="251" rx="31" fill="#18323a"/>
+  <circle cx="400" cy="164" r="55" fill="#ee735f" stroke="#18323a" stroke-width="8"/>
+  <rect x="161" y="500" width="478" height="68" rx="34" fill="#18323a"/>
+  <text x="400" y="544" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="800" fill="#fff">ALTER EGO • ELLA LANGLEY</text>
+</svg>

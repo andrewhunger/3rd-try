@@ -1,0 +1,103 @@
+(() => {
+  const menuButton = document.querySelector("[data-menu-toggle]");
+  const navigation = document.querySelector("[data-site-nav]");
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const open = navigation.classList.toggle("is-open");
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        navigation.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const staffPhotos = [...document.querySelectorAll("[data-staff-photo]")];
+
+  const setFlip = (button, flipped) => {
+    button.classList.toggle("is-flipped", flipped);
+    button.setAttribute("aria-pressed", String(flipped));
+    const name = button.dataset.staffName || "staff member";
+    button.setAttribute(
+      "aria-label",
+      flipped ? `Show ${name}'s staff photo` : `Show ${name}'s alter ego photo`
+    );
+  };
+
+  staffPhotos.forEach((button, index) => {
+    let paused = false;
+    let normalTimer;
+    let alterTimer;
+
+    const clearTimers = () => {
+      window.clearTimeout(normalTimer);
+      window.clearTimeout(alterTimer);
+    };
+
+    const schedule = (delay = 10000 + index * 950) => {
+      if (reduceMotion) return;
+      clearTimers();
+      normalTimer = window.setTimeout(() => {
+        if (paused) {
+          schedule(1800);
+          return;
+        }
+        setFlip(button, true);
+        alterTimer = window.setTimeout(() => {
+          if (!paused) setFlip(button, false);
+          schedule(10000);
+        }, 3000);
+      }, delay);
+    };
+
+    button.addEventListener("mouseenter", () => {
+      paused = true;
+      clearTimers();
+      setFlip(button, true);
+    });
+
+    button.addEventListener("mouseleave", () => {
+      paused = false;
+      setFlip(button, false);
+      schedule(10000);
+    });
+
+    button.addEventListener("focus", () => {
+      paused = true;
+      clearTimers();
+    });
+
+    button.addEventListener("blur", () => {
+      paused = false;
+      setFlip(button, false);
+      schedule(10000);
+    });
+
+    button.addEventListener("click", () => {
+      paused = true;
+      clearTimers();
+      const next = !button.classList.contains("is-flipped");
+      setFlip(button, next);
+      window.setTimeout(() => {
+        paused = false;
+        setFlip(button, false);
+        schedule(10000);
+      }, 5000);
+    });
+
+    schedule();
+  });
+
+  document.querySelectorAll('[aria-disabled="true"]').forEach((link) => {
+    link.addEventListener("click", (event) => event.preventDefault());
+  });
+
+  const year = document.querySelector("[data-current-year]");
+  if (year) year.textContent = String(new Date().getFullYear());
+})();

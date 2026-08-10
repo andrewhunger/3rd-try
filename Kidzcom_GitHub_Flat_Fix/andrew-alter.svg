@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder for Andrew's Captain America alter ego photo">
+  <rect width="800" height="600" fill="#244f9f"/>
+  <circle cx="400" cy="268" r="183" fill="#e94e4b" stroke="#fff" stroke-width="30"/>
+  <circle cx="400" cy="268" r="119" fill="#fff"/>
+  <circle cx="400" cy="268" r="80" fill="#244f9f"/>
+  <path d="M400 205l19 40 45 6-33 31 8 44-39-21-39 21 8-44-33-31 45-6z" fill="#fff"/>
+  <rect x="168" y="500" width="464" height="68" rx="34" fill="#18323a"/>
+  <text x="400" y="544" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="800" fill="#fff">ALTER EGO • CAPTAIN AMERICA</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Alter ego photo placeholder">
+  <rect width="800" height="600" fill="#f7c94b"/>
+  <path d="M400 90l62 126 139 20-101 98 24 139-124-66-124 66 24-139-101-98 139-20z" fill="#ee735f" stroke="#18323a" stroke-width="10"/>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="92" font-weight="900" fill="#fff">?</text>
+  <rect x="168" y="500" width="464" height="68" rx="34" fill="#18323a"/>
+  <text x="400" y="544" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="800" fill="#fff">ADD ALTER-EGO PHOTO</text>
+</svg>

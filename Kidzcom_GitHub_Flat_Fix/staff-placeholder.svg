@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Staff photo placeholder">
+  <rect width="800" height="600" fill="#ddd2ff"/>
+  <circle cx="400" cy="224" r="96" fill="#6f4bd8" opacity=".35"/>
+  <path d="M193 600c18-164 96-239 207-239s189 75 207 239" fill="#6f4bd8" opacity=".72"/>
+  <rect x="189" y="492" width="422" height="66" rx="33" fill="#18323a"/>
+  <text x="400" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#fff">ADD APPROVED STAFF PHOTO</text>
+</svg>

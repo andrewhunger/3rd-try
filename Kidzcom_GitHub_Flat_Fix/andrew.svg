@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder for Andrew's staff photo">
+  <rect width="800" height="600" fill="#d3f2ed"/>
+  <circle cx="400" cy="236" r="118" fill="#18323a" opacity=".13"/>
+  <path d="M205 600c17-157 90-229 195-229s178 72 195 229" fill="#2d998b"/>
+  <circle cx="400" cy="224" r="86" fill="#f3caa7"/>
+  <path d="M315 211c3-91 59-117 115-86 36 20 55 61 55 107-40-35-108-31-170-21z" fill="#51382d"/>
+  <text x="400" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">ANDREW • STAFF PHOTO</text>
+</svg>
