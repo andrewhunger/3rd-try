@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
-  <title id="title">Active play photograph placeholder</title>
-  <desc id="desc">A neutral placeholder to be replaced with an approved Kidz.com photograph.</desc>
+  <title id="title">Abstract active play illustration</title>
+  <desc id="desc">A calm abstract illustration representing active play at Kidz.com.</desc>
   <rect width="800" height="520" fill="#e6e2d9"/>
   <circle cx="185" cy="170" r="112" fill="#d9d0c0"/>
   <path d="M0 425c155-100 250-54 365-138 129-94 283-60 435 66v167H0Z" fill="#cfc4b2"/>
   <path d="m388 335 98-150 95 96 67-56 91 110Z" fill="#ffffff" opacity=".74"/>
-  <rect x="170" y="398" width="460" height="58" rx="29" fill="#173746" opacity=".88"/>
-  <text x="400" y="436" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">ADD AN APPROVED PHOTO</text>
 </svg>
