@@ -441,9 +441,11 @@ p { margin-top: 0; }
 .feature-facts dt { margin-bottom: 3px; color: rgba(255,255,255,.64); font-size: .7rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
 .feature-facts dd { margin: 0; color: white; font-size: 1.1rem; font-weight: 850; }
 .home-subsidy { background: var(--cream); }
-.team-preview { display: grid; padding: clamp(34px, 6vw, 58px); grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 36px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--mist); }
+.team-preview { padding: clamp(34px, 6vw, 58px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--mist); }
+.team-preview-intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 36px; }
 .team-preview h2 { margin-bottom: 14px; }
 .team-preview .lead { margin-bottom: 0; }
+.team-preview-grid { margin-top: 36px; }
 
 .outdoor-highlight {
   display: grid;
@@ -771,14 +773,14 @@ p { margin-top: 0; }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: 12px 14px; }
   .site-nav .nav-cta { margin: 5px 0 0; text-align: center; }
-  .hero-grid, .split, .programme-feature, .subsidy-hero-grid, .outdoor-highlight, .facebook-panel, .location-grid, .office-contact-panel, .choice-panel, .team-preview, .schools-served { grid-template-columns: 1fr; }
+  .hero-grid, .split, .programme-feature, .subsidy-hero-grid, .outdoor-highlight, .facebook-panel, .location-grid, .office-contact-panel, .choice-panel, .team-preview-intro, .schools-served { grid-template-columns: 1fr; }
   .hero-photos { width: min(100%, 720px); margin: 0 auto; }
   .hero-art { width: min(100%, 620px); margin: 0 auto; }
   .card-grid, .staff-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .cta-panel, .subsidy-panel { grid-template-columns: 1fr; }
   .subsidy-panel .button-row { justify-content: flex-start; }
   .office-contact-panel .button-row { justify-content: flex-start; }
-  .team-preview .button { justify-self: start; }
+  .team-preview-intro .button { justify-self: start; }
 }
 
 @media (max-width: 680px) {
