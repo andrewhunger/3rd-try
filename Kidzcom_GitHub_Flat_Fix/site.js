@@ -141,6 +141,96 @@
     schedule();
   });
 
+  document.querySelectorAll("[data-programme-carousel]").forEach((carousel) => {
+    const viewport = carousel.querySelector("[data-carousel-viewport]");
+    const slides = [...carousel.querySelectorAll("[data-carousel-slide]")];
+    const previousButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
+    const status = carousel.querySelector("[data-carousel-status]");
+    let currentIndex = 0;
+    let scrollFrame;
+
+    if (!viewport || !slides.length || !previousButton || !nextButton || !dotsContainer) return;
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Show ${slide.dataset.slideTitle || `programme ${index + 1}`}`);
+      dot.addEventListener("click", () => goTo(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = [...dotsContainer.querySelectorAll("button")];
+
+    const updateControls = () => {
+      previousButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === slides.length - 1;
+      dots.forEach((dot, index) => dot.setAttribute("aria-current", String(index === currentIndex)));
+      if (status) {
+        const title = slides[currentIndex].dataset.slideTitle || `Programme ${currentIndex + 1}`;
+        status.textContent = `${currentIndex + 1} of ${slides.length}: ${title}`;
+      }
+    };
+
+    function goTo(index) {
+      currentIndex = Math.max(0, Math.min(index, slides.length - 1));
+      viewport.scrollTo({
+        left: slides[currentIndex].offsetLeft,
+        behavior: reduceMotion ? "auto" : "smooth"
+      });
+      updateControls();
+    }
+
+    previousButton.addEventListener("click", () => goTo(currentIndex - 1));
+    nextButton.addEventListener("click", () => goTo(currentIndex + 1));
+
+    viewport.addEventListener("scroll", () => {
+      window.cancelAnimationFrame(scrollFrame);
+      scrollFrame = window.requestAnimationFrame(() => {
+        const closest = slides.reduce((best, slide, index) => (
+          Math.abs(slide.offsetLeft - viewport.scrollLeft) < Math.abs(slides[best].offsetLeft - viewport.scrollLeft)
+            ? index
+            : best
+        ), 0);
+        if (closest !== currentIndex) {
+          currentIndex = closest;
+          updateControls();
+        }
+      });
+    }, { passive: true });
+
+    updateControls();
+  });
+
+  const posterDialog = document.querySelector("[data-poster-dialog]");
+  const posterDialogImage = posterDialog?.querySelector("[data-poster-dialog-image]");
+  const posterDialogTitle = posterDialog?.querySelector("[data-poster-dialog-title]");
+  const posterDialogClose = posterDialog?.querySelector("[data-poster-dialog-close]");
+
+  document.querySelectorAll("[data-poster-open]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const source = button.dataset.posterSrc;
+      const title = button.dataset.posterTitle || "Programme poster";
+      if (!source) return;
+
+      if (!posterDialog || !posterDialogImage || !posterDialogTitle || typeof posterDialog.showModal !== "function") {
+        window.open(source, "_blank", "noopener");
+        return;
+      }
+
+      posterDialogImage.src = source;
+      posterDialogImage.alt = `${title} programme poster`;
+      posterDialogTitle.textContent = title;
+      posterDialog.showModal();
+    });
+  });
+
+  posterDialogClose?.addEventListener("click", () => posterDialog.close());
+  posterDialog?.addEventListener("click", (event) => {
+    if (event.target === posterDialog) posterDialog.close();
+  });
+
   document.querySelectorAll('[aria-disabled="true"]').forEach((link) => {
     link.addEventListener("click", (event) => event.preventDefault());
   });

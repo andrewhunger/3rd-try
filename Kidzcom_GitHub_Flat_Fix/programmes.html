@@ -65,25 +65,92 @@
       </section>
 
       <section class="section" id="after-school">
-        <div class="container split">
-          <div>
-            <p class="eyebrow">After school</p>
-            <h2>Space to unwind, play and get involved.</h2>
+        <div class="container">
+          <div class="split">
+            <div>
+              <p class="eyebrow">After school</p>
+              <h2>Space to unwind, play and get involved.</h2>
+            </div>
+            <div>
+              <p class="lead">Once children arrive at Kidz.com, they can choose how they want to move into the afternoon.</p>
+              <p>They might make something, join a sport or group challenge, continue a longer project, play outside or spend time with friends. Staff are there to supervise, join in and notice when somebody needs help finding their place.</p>
+              <ul class="activity-list">
+                <li>School collection</li>
+                <li>Creative activities</li>
+                <li>Indoor &amp; outdoor play</li>
+                <li>Group challenges</li>
+                <li>Time with friends</li>
+                <li>Care until 5:30pm (confirm)</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <p class="lead">Once children arrive at Kidz.com, they can choose how they want to move into the afternoon.</p>
-            <p>They might make something, join a sport or group challenge, continue a longer project, play outside or spend time with friends. Staff are there to supervise, join in and notice when somebody needs help finding their place.</p>
-            <ul class="activity-list">
-              <li>School collection</li>
-              <li>Creative activities</li>
-              <li>Indoor &amp; outdoor play</li>
-              <li>Group challenges</li>
-              <li>Time with friends</li>
-              <li>Care until 5:30pm (confirm)</li>
-            </ul>
+
+          <div class="programme-gallery" data-programme-carousel aria-labelledby="programme-gallery-title">
+            <div class="programme-gallery-header">
+              <div>
+                <p class="eyebrow">Recent programmes</p>
+                <h3 id="programme-gallery-title">A look at recent weeks.</h3>
+                <p>From space and cars to cultural celebrations and party weeks, there is always something new happening at Kidz.com.</p>
+              </div>
+              <div class="carousel-controls" aria-label="Programme carousel controls">
+                <button type="button" data-carousel-prev aria-label="Show previous programme">←</button>
+                <button type="button" data-carousel-next aria-label="Show next programme">→</button>
+              </div>
+            </div>
+
+            <div class="programme-carousel-viewport" data-carousel-viewport tabindex="0" aria-label="Recent after-school programmes">
+              <div class="programme-carousel-track">
+                <figure class="programme-slide" data-carousel-slide data-slide-title="Party Week">
+                  <button class="programme-slide-open" type="button" data-poster-open data-poster-src="after-school-party-week.webp" data-poster-title="Party Week" aria-label="Open the Party Week programme full size">
+                    <span class="programme-slide-image-wrap"><img class="programme-slide-image" src="after-school-party-week.webp" alt="Kidz.com Party Week programme with daily end-of-term activities." /></span>
+                  </button>
+                  <figcaption><strong>Party Week</strong><span>End-of-term celebrations</span></figcaption>
+                </figure>
+                <figure class="programme-slide" data-carousel-slide data-slide-title="Te Reo Māori Week">
+                  <button class="programme-slide-open" type="button" data-poster-open data-poster-src="after-school-te-reo-maori-week.webp" data-poster-title="Te Reo Māori Week" aria-label="Open the Te Reo Māori Week programme full size">
+                    <span class="programme-slide-image-wrap"><img class="programme-slide-image" src="after-school-te-reo-maori-week.webp" loading="lazy" alt="Kidz.com Te Reo Māori Week programme with crafts, challenges, games and a scavenger hunt." /></span>
+                  </button>
+                  <figcaption><strong>Te Reo Māori Week</strong><span>Language, culture and creativity</span></figcaption>
+                </figure>
+                <figure class="programme-slide" data-carousel-slide data-slide-title="Cars Week">
+                  <button class="programme-slide-open" type="button" data-poster-open data-poster-src="after-school-cars-week.webp" data-poster-title="Cars Week" aria-label="Open the Cars Week programme full size">
+                    <span class="programme-slide-image-wrap"><img class="programme-slide-image" src="after-school-cars-week.webp" loading="lazy" alt="Kidz.com Cars Week programme with creative activities, games and racing challenges." /></span>
+                  </button>
+                  <figcaption><strong>Cars Week</strong><span>Creative activities and racing fun</span></figcaption>
+                </figure>
+                <figure class="programme-slide" data-carousel-slide data-slide-title="Father’s Day Week">
+                  <button class="programme-slide-open" type="button" data-poster-open data-poster-src="after-school-fathers-day.webp" data-poster-title="Father’s Day Week" aria-label="Open the Father’s Day Week programme full size">
+                    <span class="programme-slide-image-wrap"><img class="programme-slide-image" src="after-school-fathers-day.webp" loading="lazy" alt="Kidz.com Father’s Day and Special Men Week programme with crafts, games and thank-you activities." /></span>
+                  </button>
+                  <figcaption><strong>Father’s Day Week</strong><span>Celebrating special men</span></figcaption>
+                </figure>
+                <figure class="programme-slide" data-carousel-slide data-slide-title="Space Week">
+                  <button class="programme-slide-open" type="button" data-poster-open data-poster-src="after-school-space-week.webp" data-poster-title="Space Week" aria-label="Open the Space Week programme full size">
+                    <span class="programme-slide-image-wrap"><img class="programme-slide-image" src="after-school-space-week.webp" loading="lazy" alt="Kidz.com Space Week programme with rockets, aliens, crafts and science activities." /></span>
+                  </button>
+                  <figcaption><strong>Space Week</strong><span>Rockets, aliens and experiments</span></figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="carousel-footer">
+              <div class="carousel-dots" data-carousel-dots aria-label="Choose a programme"></div>
+              <p>Swipe or use the arrows. Tap a poster to see it full size.</p>
+              <span class="sr-only" data-carousel-status aria-live="polite"></span>
+            </div>
           </div>
         </div>
       </section>
+
+      <dialog class="poster-lightbox" data-poster-dialog aria-labelledby="poster-dialog-title">
+        <div class="poster-lightbox-shell">
+          <div class="poster-lightbox-header">
+            <h2 id="poster-dialog-title" data-poster-dialog-title>Programme poster</h2>
+            <button type="button" data-poster-dialog-close>Close <span aria-hidden="true">×</span></button>
+          </div>
+          <img data-poster-dialog-image src="" alt="" />
+        </div>
+      </dialog>
 
       <section class="section section-sky">
         <div class="container split">
