@@ -162,6 +162,7 @@
     });
 
     const dots = [...dotsContainer.querySelectorAll("button")];
+    const slidePosition = (slide) => slide.offsetLeft - slides[0].offsetLeft;
 
     const updateControls = () => {
       previousButton.disabled = currentIndex === 0;
@@ -176,7 +177,7 @@
     function goTo(index) {
       currentIndex = Math.max(0, Math.min(index, slides.length - 1));
       viewport.scrollTo({
-        left: slides[currentIndex].offsetLeft,
+        left: slidePosition(slides[currentIndex]),
         behavior: reduceMotion ? "auto" : "smooth"
       });
       updateControls();
@@ -189,7 +190,7 @@
       window.cancelAnimationFrame(scrollFrame);
       scrollFrame = window.requestAnimationFrame(() => {
         const closest = slides.reduce((best, slide, index) => (
-          Math.abs(slide.offsetLeft - viewport.scrollLeft) < Math.abs(slides[best].offsetLeft - viewport.scrollLeft)
+          Math.abs(slidePosition(slide) - viewport.scrollLeft) < Math.abs(slidePosition(slides[best]) - viewport.scrollLeft)
             ? index
             : best
         ), 0);
