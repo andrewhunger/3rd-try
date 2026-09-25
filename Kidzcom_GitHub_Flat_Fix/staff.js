@@ -1,8 +1,7 @@
 /*
   Edit staff here. Each person appears automatically on about.html.
   Set featured: true for the three people shown on the homepage.
-  Upload replacement photos using the filenames listed below, or change the
-  filenames here when real staff and alter-ego photographs are ready.
+  Staff can have one photograph or an optional alter-ego photograph.
 */
 window.KIDZ_STAFF = [
   {
@@ -17,64 +16,50 @@ window.KIDZ_STAFF = [
   {
     name: "Cady",
     role: "OSCAR Team",
-    bio: "Cady’s finished profile will come from her own answers: what she enjoys, what she is most likely to join and how she wants children to feel around her.",
-    alterEgo: "Ella Langley",
-    photo: "cady.svg",
-    alterPhoto: "cady-alter.svg",
+    bio: "Cady is another future teacher and is looking forward to having a classroom of her own in 2028. Until then, she’ll be with us at Kidz.com, educating the next generation about the important things in life—mainly Ella Langley.",
+    photo: "cady.jpg",
     featured: true
   },
   {
     name: "Georgia",
     role: "OSCAR Team",
-    bio: "Georgia’s profile will be written after the short staff questionnaire so the final wording is specific, warm and recognisably hers.",
-    alterEgo: "To be chosen",
-    photo: "staff-placeholder.svg",
-    alterPhoto: "alter-placeholder.svg",
+    bio: "Georgia is studying to become a teacher, but luckily for us, we get to have her at Kidz.com first. When she’s not studying or hanging out with our kids, you might find her tearing up the hockey pitch or taking on the Cape Egmont Half Marathon.",
+    photo: "georgia.jpg",
     featured: true
   },
   {
     name: "Lily",
     role: "OSCAR Team",
-    bio: "Lily’s profile will include what she enjoys about Kidz.com, the activity she is most likely to join and what she wants children to experience.",
-    alterEgo: "To be chosen",
-    photo: "staff-placeholder.svg",
-    alterPhoto: "alter-placeholder.svg",
+    bio: "“Working at Kidz.com is just like being a mum. I’ve already raised five kids, so this is easy!” — Lily",
+    photo: "lily.jpg",
     featured: false
   },
   {
     name: "Heath",
     role: "OSCAR Team",
-    bio: "Heath’s finished profile will stay short and practical, with one or two details that help parents and children know the person behind the role.",
-    alterEgo: "To be chosen",
-    photo: "staff-placeholder.svg",
-    alterPhoto: "alter-placeholder.svg",
+    bio: "Mediating the occasional Kidz.com squabble should be great training for this future lawyer. Heath is also a bit of a prankster and loves getting involved in games with the kids.",
+    photo: "heath.jpg",
     featured: false
   },
   {
     name: "Narelle",
     role: "OSCAR Team",
-    bio: "Narelle’s profile will be completed from her own words and edited only enough to keep the team cards consistent and easy to read.",
-    alterEgo: "To be chosen",
-    photo: "staff-placeholder.svg",
-    alterPhoto: "alter-placeholder.svg",
+    bio: "Narelle loves getting involved in games with the kids, sharing plenty of laughs and watching their confidence and personalities grow.",
+    photo: "narelle.jpg",
     featured: false
   },
   {
     name: "Mrs G",
-    role: "OSCAR Team",
-    bio: "Mrs G’s profile will include a favourite part of Kidz.com, one thing children can count on from her and the alter ego she chooses.",
-    alterEgo: "To be chosen",
-    photo: "staff-placeholder.svg",
-    alterPhoto: "alter-placeholder.svg",
+    role: "Cook",
+    bio: "Mrs G (Margaret) was part of the original Kidz.com team when we first opened 25 years ago! These days, she keeps everyone well fed as our cook, including making the pizza the kids absolutely love.",
+    photo: "mrs-g.jpg",
     featured: false
   },
   {
     name: "Duncan",
-    role: "OSCAR Team",
-    bio: "Duncan’s profile will be completed after the staff questionnaire, using concrete details rather than a generic workplace biography.",
-    alterEgo: "To be chosen",
-    photo: "staff-placeholder.svg",
-    alterPhoto: "alter-placeholder.svg",
+    role: "Reliever",
+    bio: "Duncan is usually the resident barista at The Bridge on Fenton Café, but moonlights as a reliever for us at Kidz.com. He’ll usually let your kids win at basketball—while showing off another item from his extensive collection of hats and beanies.",
+    photo: "duncan.jpg",
     featured: false
   },
   {

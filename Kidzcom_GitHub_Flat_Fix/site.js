@@ -19,24 +19,28 @@
       const name = escapeHtml(person.name);
       const role = escapeHtml(person.role);
       const bio = escapeHtml(person.bio);
-      const alterEgo = escapeHtml(person.alterEgo);
       const photo = escapeHtml(person.photo);
-      const alterPhoto = escapeHtml(person.alterPhoto);
-
-      return `
-        <article class="staff-card">
-          <button class="staff-photo-button" type="button" data-staff-photo data-staff-name="${name}" aria-pressed="false" aria-label="Show ${name}'s alter ego photo">
+      const alterEgo = person.alterEgo ? escapeHtml(person.alterEgo) : "";
+      const alterPhoto = person.alterPhoto ? escapeHtml(person.alterPhoto) : "";
+      const photoMarkup = alterPhoto
+        ? `<button class="staff-photo-button" type="button" data-staff-photo data-staff-name="${name}" aria-pressed="false" aria-label="Show ${name}'s alter ego photo">
             <span class="staff-photo-inner">
               <span class="staff-photo-face"><img src="${photo}" alt="${name} at Kidz.com" /></span>
               <span class="staff-photo-face staff-photo-alter"><img src="${alterPhoto}" alt="${name}'s ${alterEgo} alter ego" /></span>
             </span>
             <span class="flip-hint">photo flips</span>
-          </button>
+          </button>`
+        : `<div class="staff-photo-static"><img src="${photo}" alt="${name} at Kidz.com" /></div>`;
+      const alterEgoMarkup = alterEgo ? `<p class="alter-ego">Alter ego: ${alterEgo}</p>` : "";
+
+      return `
+        <article class="staff-card">
+          ${photoMarkup}
           <div class="staff-copy">
             <h3>${name}</h3>
             <p class="staff-role">${role}</p>
             <p>${bio}</p>
-            <p class="alter-ego">Alter ego: ${alterEgo}</p>
+            ${alterEgoMarkup}
           </div>
         </article>`;
     }).join("");
