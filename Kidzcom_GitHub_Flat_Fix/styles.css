@@ -457,7 +457,12 @@ p { margin-top: 0; }
   scrollbar-width: none;
 }
 .programme-carousel-viewport::-webkit-scrollbar { display: none; }
-.programme-carousel-track { display: flex; width: max-content; gap: 22px; padding: 6px 0 16px; }
+.programme-carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 22px;
+  padding: 6px max(0px, calc(min(100vw - 40px, 780px) - min(100vw - 68px, 520px))) 16px 0;
+}
 .programme-slide {
   flex: 0 0 min(calc(100vw - 68px), 520px);
   margin: 0;
