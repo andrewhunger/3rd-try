@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-labelledby="title desc">
+  <title id="title">Outdoor space photograph placeholder</title>
+  <desc id="desc">A simple illustration marking the space for a future photograph of the Kidz.com outdoor area.</desc>
+  <rect width="900" height="650" fill="#cfe2e5"/>
+  <circle cx="750" cy="110" r="58" fill="#f0c851"/>
+  <path d="M0 330C190 250 330 290 455 236c155-67 286-38 445 42v372H0Z" fill="#86ab85"/>
+  <path d="M0 410c210-48 401-17 565-64 132-38 236-29 335 8v296H0Z" fill="#6f986f"/>
+  <path d="M110 650 330 360h160L705 650Z" fill="#7f8584"/>
+  <path d="M175 650 365 395h90l185 255Z" fill="#a7aeab"/>
+  <path d="M316 650h44V440h-44zm162 0h44V440h-44z" fill="#193d4d"/>
+  <path d="M288 456h262L419 310Z" fill="#d66b5c"/>
+  <rect x="606" y="320" width="18" height="204" rx="9" fill="#193d4d"/>
+  <path d="M615 334h128v84H615Z" fill="none" stroke="#f8f5ed" stroke-width="12"/>
+  <circle cx="680" cy="480" r="34" fill="none" stroke="#173746" stroke-width="12"/>
+  <path d="M650 480h-96l-34 52h132" fill="none" stroke="#173746" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
