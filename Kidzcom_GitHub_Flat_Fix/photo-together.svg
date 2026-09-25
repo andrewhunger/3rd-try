@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Children together photograph placeholder</title>
+  <desc id="desc">A neutral placeholder to be replaced with an approved Kidz.com photograph.</desc>
+  <rect width="800" height="520" fill="#dce2e6"/>
+  <circle cx="620" cy="150" r="120" fill="#cbd5db"/>
+  <path d="M0 420c150-84 252-60 354-132 130-92 283-58 446 80v152H0Z" fill="#b9c9d0"/>
+  <path d="m85 344 128-158 130 117 92-76 112 117Z" fill="#ffffff" opacity=".72"/>
+  <rect x="170" y="398" width="460" height="58" rx="29" fill="#173746" opacity=".88"/>
+  <text x="400" y="436" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">ADD AN APPROVED PHOTO</text>
+</svg>

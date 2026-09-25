@@ -57,6 +57,12 @@ Current preview names to confirm: Andrew, Cady, Georgia, Lily, Heath, Narelle, M
 - [ ] Google Maps location
 - [ ] Work and Income OSCAR subsidy page
 
+## Annual subsidy review
+
+- [ ] Check OSCAR rates and income thresholds after 1 April each year
+- [ ] Update the date shown on `oscar-subsidy.html`
+- [ ] Confirm that Work and Income application and eligibility links still work
+
 ## Photographs
 
 - [ ] One strong homepage activity photograph
