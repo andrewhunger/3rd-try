@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Creative activity photograph placeholder</title>
+  <desc id="desc">A neutral placeholder to be replaced with an approved Kidz.com photograph.</desc>
+  <rect width="800" height="1000" fill="#dfe6e4"/>
+  <circle cx="630" cy="205" r="170" fill="#cfdad6"/>
+  <path d="M0 760C190 650 320 720 475 620c140-90 250-42 325 20v360H0Z" fill="#baccc5"/>
+  <path d="M112 680 286 456l146 142 110-88 146 170Z" fill="#ffffff" opacity=".76"/>
+  <circle cx="286" cy="360" r="72" fill="#ffffff" opacity=".76"/>
+  <rect x="116" y="824" width="568" height="68" rx="34" fill="#173746" opacity=".88"/>
+  <text x="400" y="868" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle">ADD AN APPROVED KIDZ.COM PHOTO</text>
+</svg>

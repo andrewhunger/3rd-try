@@ -1,4 +1,47 @@
 (() => {
+  const escapeHtml = (value) =>
+    String(value).replace(/[&<>"']/g, (character) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    })[character]);
+
+  const staff = Array.isArray(window.KIDZ_STAFF) ? window.KIDZ_STAFF : [];
+
+  document.querySelectorAll("[data-staff-list]").forEach((container) => {
+    const people = container.dataset.staffFeatured === "true"
+      ? staff.filter((person) => person.featured)
+      : staff;
+
+    container.innerHTML = people.map((person) => {
+      const name = escapeHtml(person.name);
+      const role = escapeHtml(person.role);
+      const bio = escapeHtml(person.bio);
+      const alterEgo = escapeHtml(person.alterEgo);
+      const photo = escapeHtml(person.photo);
+      const alterPhoto = escapeHtml(person.alterPhoto);
+
+      return `
+        <article class="staff-card">
+          <button class="staff-photo-button" type="button" data-staff-photo data-staff-name="${name}" aria-pressed="false" aria-label="Show ${name}'s alter ego photo">
+            <span class="staff-photo-inner">
+              <span class="staff-photo-face"><img src="${photo}" alt="${name} at Kidz.com" /></span>
+              <span class="staff-photo-face staff-photo-alter"><img src="${alterPhoto}" alt="${name}'s ${alterEgo} alter ego" /></span>
+            </span>
+            <span class="flip-hint">photo flips</span>
+          </button>
+          <div class="staff-copy">
+            <h3>${name}</h3>
+            <p class="staff-role">${role}</p>
+            <p>${bio}</p>
+            <p class="alter-ego">Alter ego: ${alterEgo}</p>
+          </div>
+        </article>`;
+    }).join("");
+  });
+
   const menuButton = document.querySelector("[data-menu-toggle]");
   const navigation = document.querySelector("[data-site-nav]");
 

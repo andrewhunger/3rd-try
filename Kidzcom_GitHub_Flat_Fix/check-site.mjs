@@ -5,6 +5,7 @@ const pages = [
   "programmes.html",
   "holidays.html",
   "parent-info.html",
+  "oscar-subsidy.html",
   "about.html",
   "blog.html",
   "july-holidays.html",
