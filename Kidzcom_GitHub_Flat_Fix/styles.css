@@ -883,34 +883,19 @@ body {
 }
 
 .site-header .logo {
-  display: grid;
-  min-width: 188px;
-  align-content: center;
-  justify-items: start;
+  display: flex;
+  min-width: 224px;
+  align-items: center;
+  justify-content: flex-start;
   line-height: 1;
 }
 
-.site-header .logo img { display: none; }
-
-.site-header .logo::before {
-  background: linear-gradient(90deg, var(--blue) 0 57%, var(--red) 57% 100%);
-  background-clip: text;
-  color: transparent;
-  content: "kidz.com";
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -.075em;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.site-header .logo::after {
-  margin-top: 6px;
-  color: #77736f;
-  content: "OUT OF SCHOOL CARE";
-  font-size: .66rem;
-  font-weight: 800;
-  letter-spacing: .14em;
+.site-header .logo img {
+  display: block;
+  width: 224px;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
 }
 
 .site-nav { gap: 10px; }
@@ -1242,8 +1227,8 @@ main > .section.section-purple > .narrow { border-color: transparent; background
 
 @media (max-width: 1030px) {
   .nav-shell { min-height: 86px; }
-  .site-header .logo { min-width: 168px; }
-  .site-header .logo::before { font-size: 1.75rem; }
+  .site-header .logo { min-width: 0; }
+  .site-header .logo img { width: 184px; }
   .site-nav { top: 86px; border-radius: 20px; }
   .site-nav a[aria-current="page"]::after { display: none; }
   .site-nav .nav-cta { margin-left: 0; }
@@ -1255,6 +1240,7 @@ main > .section.section-purple > .narrow { border-color: transparent; background
   .utility-enrolment { max-width: 215px; }
   .utility-phone { text-align: right; white-space: nowrap; }
   .nav-shell { width: min(calc(100% - 28px), var(--max)); }
+  .site-header .logo img { width: 168px; }
   .hero { padding-top: 50px; }
   .hero h1 { font-size: clamp(2.7rem, 14vw, 4.15rem); }
   .hero-photos { min-height: 420px; gap: 10px; }
