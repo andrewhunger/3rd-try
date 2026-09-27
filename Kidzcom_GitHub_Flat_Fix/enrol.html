@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Enquire about availability or begin enrolling at Kidz.com before-school, after-school and holiday care in Stratford." />
+    <title>Enrol or Enquire | Kidz.com Stratford</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="logo" href="index.html" aria-label="Kidz.com home"><img src="kidz-logo.png" alt="Kidz.com — today’s care for tomorrow’s future" /></a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-navigation" aria-label="Open menu">☰</button>
+        <nav class="site-nav" id="site-navigation" data-site-nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="programmes.html">Before &amp; after school</a>
+          <a href="holidays.html">School holidays</a>
+          <a href="parent-info.html">Parent info</a>
+          <a href="about.html">About &amp; team</a>
+          <a class="nav-cta" href="enrol.html" aria-current="page">Enrol or enquire</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Enrol or enquire</span></div>
+          <p class="eyebrow">Enrolment and availability</p>
+          <h1>Start with the office.</h1>
+          <p class="lead">Ann handles Kidz.com enrolments and OSCAR subsidies and can help you through the process.</p>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <div class="enquiry-layout">
+            <form class="enquiry-form" action="#" method="post" data-enquiry-form>
+              <p class="eyebrow">Check availability</p>
+              <h2>Enrolment &amp; availability enquiry</h2>
+              <p>Tell us what care you are looking for. This is an initial enquiry rather than the full enrolment paperwork.</p>
+
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Parent or caregiver name *</span>
+                  <input type="text" name="caregiver_name" autocomplete="name" required />
+                </label>
+                <label class="form-field">
+                  <span>Phone number *</span>
+                  <input type="tel" name="phone" autocomplete="tel" required />
+                </label>
+                <label class="form-field form-field-wide">
+                  <span>Email address *</span>
+                  <input type="email" name="email" autocomplete="email" required />
+                </label>
+                <label class="form-field">
+                  <span>School attending</span>
+                  <select name="school">
+                    <option value="">Choose a school</option>
+                    <option>St Joseph’s School Stratford</option>
+                    <option>Stratford Primary School</option>
+                    <option>Ngaere School</option>
+                    <option>Midhirst School</option>
+                    <option>Avon School</option>
+                    <option>Other or not yet attending</option>
+                  </select>
+                </label>
+                <label class="form-field">
+                  <span>Preferred way to contact you</span>
+                  <select name="contact_preference">
+                    <option>Email</option>
+                    <option>Phone</option>
+                  </select>
+                </label>
+              </div>
+
+              <fieldset class="form-group">
+                <legend>Type of care needed</legend>
+                <div class="check-grid">
+                  <label class="check-option"><input type="checkbox" name="care" value="Before school" /> Before school</label>
+                  <label class="check-option"><input type="checkbox" name="care" value="After school" /> After school</label>
+                  <label class="check-option"><input type="checkbox" name="care" value="School holidays" /> School holidays</label>
+                </div>
+              </fieldset>
+
+              <div class="form-grid">
+                <label class="form-field form-field-wide">
+                  <span>Days needed and any questions</span>
+                  <textarea name="message" placeholder="For example: after-school care on Mondays and Wednesdays"></textarea>
+                </label>
+              </div>
+
+              <fieldset class="form-group">
+                <label class="check-option"><input type="checkbox" name="subsidy_information" value="Yes" /> I would like information about the WINZ OSCAR Childcare Subsidy.</label>
+              </fieldset>
+
+              <div class="form-actions">
+                <button class="button" type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+                <p class="form-note">We will use these details only to respond to your enquiry.</p>
+              </div>
+              <p class="form-status" data-enquiry-status tabindex="-1" aria-live="polite"></p>
+            </form>
+
+            <div class="contact-stack">
+              <article>
+                <p class="eyebrow">Direct contact</p>
+                <h2>Ann is here to help.</h2>
+                <p>Call or email the office if you would rather talk through what you need, or arrange a time to come in for a tour.</p>
+                <div class="contact-list">
+                  <div><span>Telephone</span><a href="tel:+6467650401">(06) 765 0401</a></div>
+                  <div><span>Email</span><a href="mailto:office@mountainviewvineyard.org">office@mountainviewvineyard.org</a></div>
+                  <div><span>Location</span><strong>159 Orlando Street, Stratford</strong></div>
+                </div>
+              </article>
+
+              <article>
+                <h3>Programme operating hours</h3>
+                <div class="hours-list">
+                  <div><span>Before school</span><strong>From 7:00am</strong></div>
+                  <div><span>After school</span><strong>Until 5:30pm</strong></div>
+                  <div><span>School holidays</span><strong>7:00am–5:30pm</strong></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">How to enrol</p>
+            <h2>Getting started is simple.</h2>
+          </div>
+          <ol class="steps">
+            <li><strong>Get in touch</strong><br />Call, email or use the enquiry form.</li>
+            <li><strong>Tell us what care you need</strong><br />Let us know your child’s school, the type of care you need and the days you are looking for.</li>
+            <li><strong>Come in for a tour if you would like</strong><br />Meet us and have a look around Kidz.com.</li>
+            <li><strong>Complete the paperwork</strong><br />We can help you through it.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="logo footer-logo" href="index.html" aria-label="Kidz.com home"><img src="kidz-logo.png" alt="Kidz.com — today’s care for tomorrow’s future" /></a>
+            <p class="footer-tagline">Creative activities, active play and a place to belong.</p>
+            <div class="social-row"><a class="social-link" href="https://www.facebook.com/groups/861718957249443/user/61590671048861" target="_blank" rel="noopener"><span aria-hidden="true">f</span> Facebook</a></div>
+          </div>
+          <div>
+            <p class="footer-title">Explore</p>
+            <div class="footer-links"><a href="programmes.html">Before &amp; after school</a><a href="holidays.html">School holidays</a><a href="parent-info.html">Parent information</a><a href="oscar-subsidy.html">OSCAR subsidy</a><a href="about.html">About &amp; team</a></div>
+          </div>
+          <div>
+            <p class="footer-title">Contact</p>
+            <div class="footer-links"><a href="mailto:office@mountainviewvineyard.org">office@mountainviewvineyard.org</a><a href="tel:+6467650401">(06) 765 0401</a><a href="https://maps.google.com/?q=159+Orlando+Street+Stratford+New+Zealand">159 Orlando Street, Stratford</a></div>
+          </div>
+        </div>
+        <div class="footer-bottom"><span>An OSCAR programme run by MountainView Vineyard Church.</span><span>© <span data-current-year>2026</span> Kidz.com · Privacy · Policies</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

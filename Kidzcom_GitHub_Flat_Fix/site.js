@@ -10,6 +10,24 @@
 
   const staff = Array.isArray(window.KIDZ_STAFF) ? window.KIDZ_STAFF : [];
 
+  const siteHeader = document.querySelector(".site-header");
+  let utilityBar = document.querySelector(".site-alert");
+
+  if (siteHeader) {
+    if (!utilityBar) {
+      utilityBar = document.createElement("div");
+      utilityBar.className = "site-alert";
+      siteHeader.before(utilityBar);
+    }
+
+    utilityBar.innerHTML = `
+      <div class="utility-shell">
+        <span class="utility-history">Stratford's community OSCAR programme for 25 years</span>
+        <a class="utility-enrolment" href="enrol.html">WINZ subsidies available · Now enrolling for Term &amp; holidays</a>
+        <a class="utility-phone" href="tel:+6467650401" aria-label="Call Kidz.com on 06 765 0401">☎&nbsp; (06) 765 0401</a>
+      </div>`;
+  }
+
   document.querySelectorAll("[data-staff-list]").forEach((container) => {
     const people = container.dataset.staffFeatured === "true"
       ? staff.filter((person) => person.featured)
@@ -234,6 +252,19 @@
 
   document.querySelectorAll('[aria-disabled="true"]').forEach((link) => {
     link.addEventListener("click", (event) => event.preventDefault());
+  });
+
+  const enquiryForm = document.querySelector("[data-enquiry-form]");
+  const enquiryStatus = document.querySelector("[data-enquiry-status]");
+
+  enquiryForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!enquiryForm.reportValidity()) return;
+
+    if (enquiryStatus) {
+      enquiryStatus.textContent = "This comparison form is ready to connect, but it is not sending enquiries yet. Please call (06) 765 0401 or email the office for now.";
+      enquiryStatus.focus();
+    }
   });
 
   const year = document.querySelector("[data-current-year]");
