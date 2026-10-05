@@ -9,6 +9,8 @@ const pages = [
   "oscar-subsidy.html",
   "about.html",
   "blog.html",
+  "luke-to-anakin-to-luke-again.html",
+  "what-spy-kids-taught-me-about-screen-time.html",
   "july-holidays.html",
   "404.html",
 ];
