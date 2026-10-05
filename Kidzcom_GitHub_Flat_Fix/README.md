@@ -1,4 +1,8 @@
-# Kidz.com website - Photo-Led Neutral
+# Kidz.com website - Wegic-inspired comparison branch
+
+This branch applies the visual direction from the Wegic concept to the existing Kidz.com content. It keeps the live site's programme copy, staff details, posters and spacious footer, while introducing the blue utility bar, Manrope typography, warm background, rounded section panels and a separate enrolment-enquiry page.
+
+It is intentionally isolated from `main` for side-by-side review. The enquiry form is a visual prototype and must be connected to an approved form-processing service before production use.
 
 This version is deliberately built without folders. Every website file sits at the top level of the GitHub repository, matching the way Andrew's browser uploads files.
 
@@ -18,6 +22,7 @@ Files with matching names will replace the current versions. GitHub keeps the pr
 - `programmes.html` - before- and after-school care
 - `holidays.html` - holiday programme
 - `parent-info.html` - parent information and enrolment
+- `enrol.html` - enrolment and availability enquiry prototype
 - `oscar-subsidy.html` - current subsidy guide, income thresholds and application steps
 - `about.html` - approach and staff profiles
 - `blog.html` - termly blog index
