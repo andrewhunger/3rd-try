@@ -1208,6 +1208,7 @@ main > .section.section-purple > .narrow { border-color: transparent; background
 .form-actions .button { border: 0; cursor: pointer; }
 .form-note { margin: 0; color: var(--ink-soft); font-size: .8rem; }
 .form-status { min-height: 1.5em; margin: 18px 0 0; color: var(--brand-blue); font-weight: 700; }
+.form-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 
 .contact-stack { display: grid; align-content: start; gap: 22px; }
 .contact-stack > article { padding: clamp(27px, 4vw, 38px); }

@@ -257,13 +257,15 @@
   const enquiryForm = document.querySelector("[data-enquiry-form]");
   const enquiryStatus = document.querySelector("[data-enquiry-status]");
 
-  enquiryForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (!enquiryForm.reportValidity()) return;
+  if (enquiryStatus && new URLSearchParams(window.location.search).get("sent") === "1") {
+    enquiryStatus.textContent = "Thank you — your enquiry has been sent to our office. Ann will be in touch.";
+    enquiryStatus.focus();
+    window.history.replaceState({}, "", `${window.location.pathname}${window.location.hash}`);
+  }
 
+  enquiryForm?.addEventListener("submit", () => {
     if (enquiryStatus) {
-      enquiryStatus.textContent = "This comparison form is ready to connect, but it is not sending enquiries yet. Please call (06) 765 0401 or email the office for now.";
-      enquiryStatus.focus();
+      enquiryStatus.textContent = "Sending your enquiry…";
     }
   });
 

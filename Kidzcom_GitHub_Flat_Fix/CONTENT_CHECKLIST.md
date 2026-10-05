@@ -4,7 +4,7 @@ These items are deliberately not invented in the preview.
 
 ## Confirm the practical facts
 
-- [ ] Ann's preferred enrolment email address
+- [x] Ann's preferred enrolment email address: gr8.kidz@xtra.co.nz
 - [ ] Main phone number
 - [ ] Before-school opening time
 - [ ] After-school closing time
